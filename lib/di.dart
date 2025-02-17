@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_bloc_clean_architecture/data/remote/rest_api.dart';
+import 'package:flutter_bloc_clean_architecture/data/remote/rest_client_api.dart';
 import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;
 
-void setup(){
+void setup() {
   getIt.registerSingleton<Dio>(Dio());
-  getIt.registerFactory(() => RestApi(getIt()));
+  getIt.registerFactory(() => RestClientApi(getIt()));
 }
